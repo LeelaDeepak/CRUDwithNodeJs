@@ -1,0 +1,70 @@
+.pgRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mylogin {
+    height: 500px;
+    padding: 30px;
+}
+
+.loginTxt {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.fieldsArea {
+    padding: 1rem;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.frgtbtn {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.frgtpwd {
+    text-align: end;
+    padding-bottom: 20px;
+}
+
+.loginBtn {
+    width: 100%;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.loginBox {
+    margin: 2rem;
+    /* Consolidated margin */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    background: rgb(193, 190, 190);
+}
+
+.accountText {
+    text-align: center;
+    font-weight: 500;
+}
+
+input {
+    color: black !important;
+}
+
+
+@media (max-width: 1093px) {
+    .pgRow {
+        display: block;
+    }
+
+    .mylogin {
+        display: none;
+    }
+
+    .loginBox {
+        margin: 20px;
+    }
+}
