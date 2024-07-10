@@ -5,21 +5,21 @@
     <div class="loginSide">
         <div class="loginBox">
             <h1 class="loginTxt"><b>Welcome To Login Portal</b></h1>
-            <form class="fieldsArea">
+            <form class="fieldsArea" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                 <mat-form-field appearance="outline">
                     <mat-label>Enter Email</mat-label>
-                    <input matInput placeholder="Email">
+                    <input matInput placeholder="Email" formControlName="email" autocomplete="off">
                     <mat-icon matSuffix>mail</mat-icon>
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-label>Enter Password</mat-label>
-                    <input matInput placeholder="Password" type="password">
+                    <input matInput placeholder="Password" type="password"  formControlName="password" autocomplete="off">
                     <mat-icon matSuffix>password</mat-icon>
                 </mat-form-field>
                 <div class="frgtpwd">
                     <a href="#" class="frgtbtn">Forgot Password</a>
                 </div>
-                <p class="accountText">If you don’t have account ? <span><a href="#" class="frgtbtn">Register</a></span></p>
+                <p class="accountText">If you don’t have account ? <span><a routerLink="/register" class="frgtbtn">Register</a></span></p>
                 <button class="loginBtn" mat-raised-button color="primary">Login</button>
             </form>
         </div>

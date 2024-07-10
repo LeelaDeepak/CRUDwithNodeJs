@@ -1,1 +1,32 @@
-<p>register works!</p>
+<mat-toolbar>
+    <span>Register To Simple CRUD</span>
+</mat-toolbar>
+<div class="pgRow">
+    <div class="regSide">
+        <div class="regBox">
+            <h1 class="regTxt"><b>Welcome To Register Portal</b></h1>
+            <form class="fieldsArea" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="genderBox">
+                    <button class="btn" (click)="registerForm.patchValue({ gender: 'male' })" ><img src="assets/male.png" alt="male" class="imgBtn"></button>
+                    <button class="btn" (click)="registerForm.patchValue({ gender: 'female' })"><img src="assets/female.jfif" alt="female" class="imgBtn"></button>
+                </div>
+                <p>Choosen Gender: <b>{{registerForm.value['gender']}}</b></p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter Email</mat-label>
+                    <input matInput placeholder="Email" autocomplete="off" formControlName="email">
+                    <mat-icon matSuffix>mail</mat-icon>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter Password</mat-label>
+                    <input matInput placeholder="Password" autocomplete="off" type="password" formControlName="password">
+                    <mat-icon matSuffix>password</mat-icon>
+                </mat-form-field>
+                <p class="accountText">Already have account? <span><a routerLink="/" class="regbtn">Login</a></span></p>
+                <button class="loginBtn" mat-raised-button color="primary">Register</button>
+            </form>
+        </div>
+    </div>
+    <div class="picSide">
+        <img src="assets/loginImg.gif" alt="login" class="mylogin">
+    </div>
+</div>

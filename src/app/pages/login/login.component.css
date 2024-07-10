@@ -38,8 +38,7 @@ mat-form-field {
 }
 
 .loginBox {
-    margin: 2rem;
-    /* Consolidated margin */
+    margin: 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     background: rgb(193, 190, 190);

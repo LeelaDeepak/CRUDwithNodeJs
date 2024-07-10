@@ -1,0 +1,84 @@
+.pgRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.regBox{
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    background: rgb(193, 190, 190);
+}
+.fixedGender {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.regTxt{
+    text-align: center;
+    padding-top: 20px;   
+}
+
+.fieldsArea {
+    padding: 1rem;
+}
+
+.genderBox{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.btn{
+    border: none;
+    border-radius: 100px;
+}
+.accountText {
+    text-align: center;
+    font-weight: 500;
+}
+
+.loginBtn {
+    width: 100%;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.regbtn {
+    text-decoration: none;
+    font-weight: 500;
+}
+.imgBtn{
+    height: 85px;
+    border-radius: 100px;
+}
+
+.imgBtn:hover{
+    cursor: pointer;
+}
+
+
+mat-form-field{
+    width: 100%;
+}
+
+
+@media (max-width: 1093px) {
+    .pgRow {
+        display: block;
+    }
+
+    .mylogin {
+        display: none;
+    }
+
+    .regBox {
+        margin: 20px;
+    }
+
+    .imgBtn{
+        height: 130px;
+        border-radius: 100px;
+    }
+}
