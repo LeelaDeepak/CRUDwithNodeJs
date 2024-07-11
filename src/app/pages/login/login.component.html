@@ -20,7 +20,7 @@
                     <a href="#" class="frgtbtn">Forgot Password</a>
                 </div>
                 <p class="accountText">If you don’t have account ? <span><a routerLink="/register" class="frgtbtn">Register</a></span></p>
-                <button class="loginBtn" mat-raised-button color="primary">Login</button>
+                <button class="loginBtn" mat-raised-button color="primary" [disabled]="!loginForm.valid" [ngStyle]="{'border': !loginForm.valid ? '1px solid black' : 'none'}">Login</button>
             </form>
         </div>
     </div>

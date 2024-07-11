@@ -6,11 +6,13 @@
         <div class="regBox">
             <h1 class="regTxt"><b>Welcome To Register Portal</b></h1>
             <form class="fieldsArea" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-                <div class="genderBox">
-                    <button class="btn" (click)="registerForm.patchValue({ gender: 'male' })" ><img src="assets/male.png" alt="male" class="imgBtn"></button>
-                    <button class="btn" (click)="registerForm.patchValue({ gender: 'female' })"><img src="assets/female.jfif" alt="female" class="imgBtn"></button>
-                </div>
-                <p>Choosen Gender: <b>{{registerForm.value['gender']}}</b></p>
+                <mat-form-field>
+                    <mat-label>Choose Your Gender</mat-label>
+                    <mat-select formControlName="gender">
+                      <mat-option value="Male">Male</mat-option>
+                      <mat-option value="Female">Female</mat-option>
+                    </mat-select>
+                  </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-label>Enter Email</mat-label>
                     <input matInput placeholder="Email" autocomplete="off" formControlName="email">
@@ -22,7 +24,7 @@
                     <mat-icon matSuffix>password</mat-icon>
                 </mat-form-field>
                 <p class="accountText">Already have account? <span><a routerLink="/" class="regbtn">Login</a></span></p>
-                <button class="loginBtn" mat-raised-button color="primary">Register</button>
+                <button class="loginBtn" mat-raised-button color="primary" [disabled]="!registerForm.valid" [ngStyle]="{'border': !registerForm.valid ? '1px solid black' : 'none'}">Register</button>
             </form>
         </div>
     </div>

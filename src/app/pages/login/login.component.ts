@@ -6,12 +6,13 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { NgStyle } from '@angular/common';
 
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [MatToolbarModule, MatButtonModule, MatIconModule,MatInputModule,MatFormFieldModule,ReactiveFormsModule,RouterLink],
+  imports: [MatToolbarModule, MatButtonModule, MatIconModule,MatInputModule,MatFormFieldModule,ReactiveFormsModule,RouterLink,NgStyle],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -23,8 +24,8 @@ export class LoginComponent {
 
   ngOnInit(){
     this.loginForm = this.fb.group({
-      email:['',Validators.required],
-      password:['',Validators.required]
+      email:['',Validators.required,Validators.email],
+      password:['',Validators.required,Validators.maxLength(6)]
     })
   }
   
